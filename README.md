@@ -1,0 +1,2 @@
+A very bare-bones tool that allows me to use my phone as a wireless mouse to my linux computer.
+So far, this works only as a mouse only via TCP. With time, I'd like to add Bluetooth support and keyboard functionality along with some form of encryption. 

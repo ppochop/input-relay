@@ -1,0 +1,31 @@
+#:kivy 2.1.0
+
+<ConnectScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            id: lbl1
+            text: root.label_text
+        TextInput:
+            id: txt1
+            multiline: False
+        Button:
+            id: btn1
+            text: 'Connect'
+            on_press: root.connect(txt1.text)
+        Button:
+            id: btn2
+            text: 'Start the mouse'
+            on_press: root.manager.current = 'control'
+            disabled: True
+
+<MouseButtons>
+    BoxLayout:
+        Button:
+            text: 'LMB'
+            on_press: root.press_lmb()
+            on_release: root.release_lmb()
+        Button:
+            text: 'RMB'
+            on_press: root.press_rmb()
+            on_release: root.release_rmb()
